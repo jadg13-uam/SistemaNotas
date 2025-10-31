@@ -3,7 +3,7 @@ namespace SistemaNotas.Modelos
 {
     public class Carrera
     {
-        public string Nombre {  get; set; }
+        public string Nombre { get; set; }
         public string Codigo { get; set; }
 
         public Carrera() { }
@@ -13,5 +13,6 @@ namespace SistemaNotas.Modelos
             Codigo = codigo;
             Nombre = nombre;
         }
+
     }
 }

@@ -94,6 +94,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Referencias\RefImg.txt" />
+    <None Include="Resources\Buscar.png" />
     <None Include="Resources\Agregar.png" />
     <None Include="Resources\Eliminar.png" />
   </ItemGroup>

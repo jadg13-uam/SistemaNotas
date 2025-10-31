@@ -17,15 +17,29 @@ namespace SistemaNotas.Controlador
                 Carrera carrera = new Carrera(codigo, nombre);
                 carreras.Add(carrera);
                 return true;
-            }catch (Exception)
+            }
+            catch (Exception)
             {
-                return false;   
+                return false;
             }
         }
 
+        /// <summary>
+        /// Obtiene todos los registros de carrera
+        /// </summary>
+        /// <returns></returns>
         public List<Carrera> GetCarreras()
         {
             return carreras;
+        }
+        /// <summary>
+        /// Busca un elemento y muestra todos los registros encontrados
+        /// </summary>
+        /// <param name="dato"></param>
+        /// <returns></returns>
+        public List<Carrera> GetCarreras(string dato)
+        {
+            return carreras.FindAll(c => c.Nombre.Equals(dato));
         }
 
         public Carrera GetCarrera(string codigo, string nombre)
@@ -44,5 +58,7 @@ namespace SistemaNotas.Controlador
             carreras.Remove(carrera);
             return true;
         }
+
+
     }
 }

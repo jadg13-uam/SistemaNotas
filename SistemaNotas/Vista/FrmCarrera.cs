@@ -50,5 +50,12 @@ namespace SistemaNotas.Vista
             lista.Eliminar(tbNombre.Text, tbCodigo.Text);
             Listar();
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgvRegistros.DataSource = null;
+            dgvRegistros.DataSource = lista.GetCarreras(tbDato.Text);
+            dgvRegistros.Refresh();
+        }
     }
 }
