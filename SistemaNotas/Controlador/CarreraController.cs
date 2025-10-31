@@ -39,7 +39,7 @@ namespace SistemaNotas.Controlador
         /// <returns></returns>
         public List<Carrera> GetCarreras(string dato)
         {
-            return carreras.FindAll(c => c.Nombre.Equals(dato));
+            return carreras.FindAll(c => c.Nombre.Contains(dato));
         }
 
         public Carrera GetCarrera(string codigo, string nombre)
