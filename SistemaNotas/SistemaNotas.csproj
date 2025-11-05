@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -65,6 +68,12 @@
     <Compile Include="Vista\FrmCarrera.Designer.cs">
       <DependentUpon>FrmCarrera.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FrmCarrerasDocentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmCarrerasDocentes.Designer.cs">
+      <DependentUpon>FrmCarrerasDocentes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FrmDocente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,9 +96,13 @@
     <EmbeddedResource Include="Vista\FrmCarrera.resx">
       <DependentUpon>FrmCarrera.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmCarrerasDocentes.resx">
+      <DependentUpon>FrmCarrerasDocentes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmDocente.resx">
       <DependentUpon>FrmDocente.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

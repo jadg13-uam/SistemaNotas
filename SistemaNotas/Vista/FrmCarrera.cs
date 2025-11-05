@@ -23,6 +23,7 @@ namespace SistemaNotas.Vista
         {
             lista.Agregar(tbNombre.Text, tbCodigo.Text);
             Listar();
+            lista.GuardarJson("C:\\backup\\carreras.json");
             tbCodigo.Clear();
             tbNombre.Clear();
             tbNombre.Focus();
