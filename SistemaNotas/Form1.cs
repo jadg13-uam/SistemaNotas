@@ -28,5 +28,11 @@ namespace SistemaNotas
             FrmCarrerasDocentes frm = new FrmCarrerasDocentes();
             frm.Show();
         }
+
+        private void docentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDocente frm = new FrmDocente();
+            frm.Show();
+        }
     }
 }
