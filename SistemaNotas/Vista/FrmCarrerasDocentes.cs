@@ -21,8 +21,13 @@ namespace SistemaNotas.Vista
 
         private void FrmCarrerasDocentes_Load(object sender, EventArgs e)
         {
-            
-            for(int  i = 0; i < carreras.CargarJson("C:\\backup\\carreras.json").Count; i++)
+            MostrarCarrrera();
+        }
+
+        private void MostrarCarrrera()
+        {
+
+            for (int i = 0; i < carreras.CargarJson("C:\\backup\\carreras.json").Count; i++)
             {
                 string carrera = carreras.CargarJson("C:\\backup\\carreras.json")[i].Nombre;
                 tvCarreras.Nodes.Add(carrera);
