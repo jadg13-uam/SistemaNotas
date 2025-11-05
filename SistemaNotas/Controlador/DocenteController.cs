@@ -56,24 +56,24 @@ namespace SistemaNotas.Controlador
         }
 
         // Carga el listado desde un archivo JSON (si no existe, deja la lista vacía)
-        public bool CargarJson(string rutaArchivo)
+        public List<Docente> CargarJson(string rutaArchivo)
         {
             try
             {
                 if (!File.Exists(rutaArchivo))
                 {
                     listado = new List<Docente>();
-                    return true;
+                    return listado;
                 }
 
                 var json = File.ReadAllText(rutaArchivo, Encoding.UTF8);
                 var data = JsonConvert.DeserializeObject<List<Docente>>(json);
                 listado = data ?? new List<Docente>();
-                return true;
+                return listado;
             }
             catch
             {
-                return false;
+                listado = new List<Docente> { }; return listado;
             }
         }
 

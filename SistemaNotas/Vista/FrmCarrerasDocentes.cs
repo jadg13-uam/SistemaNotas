@@ -14,6 +14,8 @@ namespace SistemaNotas.Vista
     public partial class FrmCarrerasDocentes : Form
     {
         CarreraController carreras = new CarreraController();
+        DocenteController docentes = new DocenteController();
+
         public FrmCarrerasDocentes()
         {
             InitializeComponent();
@@ -22,6 +24,7 @@ namespace SistemaNotas.Vista
         private void FrmCarrerasDocentes_Load(object sender, EventArgs e)
         {
             MostrarCarrrera();
+            MostrarDocentes();
         }
 
         private void MostrarCarrrera()
@@ -33,6 +36,18 @@ namespace SistemaNotas.Vista
                 tvCarreras.Nodes.Add(carrera);
                 tvCarreras.ExpandAll();
             }
+        }
+
+        private void MostrarDocentes()
+        {
+
+            for(int i = 0; i < docentes.CargarJson("C:\\backup\\docentes.json").Count; i++)
+            {
+                string nombre = docentes.CargarJson("C:\\backup\\docentes.json")[i].Nombres + " "+ docentes.CargarJson("C:\\backup\\docentes.json")[i].Apellidos;
+                
+                lbDocentes.Items.Add(nombre);
+            }
+
         }
     }
 }

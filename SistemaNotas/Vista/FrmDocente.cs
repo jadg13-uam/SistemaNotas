@@ -29,7 +29,7 @@ namespace SistemaNotas.Vista
                 tbApellidos.Clear();
                 dtpFechaNac.Value = DateTime.Now;
                 tbTitulo.Clear();
-                docentes.GuardarJson("docentes.json");
+                docentes.GuardarJson("c:\\backup\\docentes.json");
                 MessageBox.Show("Registro guardado", "Sistema de Notas", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
