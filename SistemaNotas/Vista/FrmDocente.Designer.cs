@@ -62,7 +62,7 @@
             this.btnBuscar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(557, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(418, 27);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -100,7 +100,7 @@
             // 
             this.tbDato.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbDato.Name = "tbDato";
-            this.tbDato.Size = new System.Drawing.Size(132, 27);
+            this.tbDato.Size = new System.Drawing.Size(100, 27);
             this.tbDato.ToolTipText = "Escribe el nombre de la carrera a buscar";
             // 
             // btnBuscar
@@ -111,6 +111,7 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(29, 24);
             this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // groupBox1
             // 
@@ -124,116 +125,104 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.tbCif);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(40, 57);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(30, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(443, 297);
+            this.groupBox1.Size = new System.Drawing.Size(332, 241);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del docente";
             // 
             // tbTitulo
             // 
-            this.tbTitulo.Location = new System.Drawing.Point(109, 222);
-            this.tbTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbTitulo.Location = new System.Drawing.Point(82, 180);
             this.tbTitulo.Name = "tbTitulo";
-            this.tbTitulo.Size = new System.Drawing.Size(249, 22);
+            this.tbTitulo.Size = new System.Drawing.Size(188, 20);
             this.tbTitulo.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 230);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(24, 187);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 16);
+            this.label5.Size = new System.Drawing.Size(40, 15);
             this.label5.TabIndex = 8;
             this.label5.Text = "Titulo:";
             // 
             // dtpFechaNac
             // 
             this.dtpFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaNac.Location = new System.Drawing.Point(188, 182);
-            this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaNac.Location = new System.Drawing.Point(141, 148);
             this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(171, 22);
+            this.dtpFechaNac.Size = new System.Drawing.Size(129, 20);
             this.dtpFechaNac.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 190);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(24, 154);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 16);
+            this.label4.Size = new System.Drawing.Size(127, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "Fecha de Nacimiento:";
             // 
             // tbApellidos
             // 
-            this.tbApellidos.Location = new System.Drawing.Point(109, 132);
-            this.tbApellidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbApellidos.Location = new System.Drawing.Point(82, 107);
             this.tbApellidos.Name = "tbApellidos";
-            this.tbApellidos.Size = new System.Drawing.Size(249, 22);
+            this.tbApellidos.Size = new System.Drawing.Size(188, 20);
             this.tbApellidos.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 132);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(24, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 16);
+            this.label3.Size = new System.Drawing.Size(60, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Apellidos:";
             // 
             // tbNombres
             // 
-            this.tbNombres.Location = new System.Drawing.Point(109, 86);
-            this.tbNombres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNombres.Location = new System.Drawing.Point(82, 70);
             this.tbNombres.Name = "tbNombres";
-            this.tbNombres.Size = new System.Drawing.Size(249, 22);
+            this.tbNombres.Size = new System.Drawing.Size(188, 20);
             this.tbNombres.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 90);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(24, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 16);
+            this.label2.Size = new System.Drawing.Size(61, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombres:";
             // 
             // tbCif
             // 
-            this.tbCif.Location = new System.Drawing.Point(109, 41);
-            this.tbCif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCif.Location = new System.Drawing.Point(82, 33);
             this.tbCif.Name = "tbCif";
-            this.tbCif.Size = new System.Drawing.Size(199, 22);
+            this.tbCif.Size = new System.Drawing.Size(150, 20);
             this.tbCif.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 41);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(50, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 16);
+            this.label1.Size = new System.Drawing.Size(28, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "CIF:";
             // 
             // FrmDocente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 554);
+            this.ClientSize = new System.Drawing.Size(418, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmDocente";
             this.Text = "Docentes";
+            this.Load += new System.EventHandler(this.FrmDocente_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

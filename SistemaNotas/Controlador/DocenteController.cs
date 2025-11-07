@@ -40,6 +40,11 @@ namespace SistemaNotas.Controlador
             return listado;
         }
 
+        public List<Docente> GetDocentes(string dato)
+        {
+            return listado.FindAll(d => d.Nombres.Contains(dato) || d.Apellidos.Contains(dato) || d.Cif.Contains(dato));
+        }
+
         // Guarda el listado completo en un archivo JSON (UTF-8)
         public bool GuardarJson(string rutaArchivo)
         {

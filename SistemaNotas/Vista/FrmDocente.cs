@@ -1,4 +1,5 @@
 ﻿using SistemaNotas.Controlador;
+using SistemaNotas.Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,27 @@ namespace SistemaNotas.Vista
                 MessageBox.Show("Error al guardar", "Sistema de notas", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             tbCif.Focus();
+        }
+
+        private void CargarDocentes()
+        {
+
+        }
+
+
+        private void FrmDocente_Load(object sender, EventArgs e)
+        {
+            docentes.CargarJson("C:\\backup\\docentes.json");
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            tbCif.Text = docentes.GetDocentes(tbDato.Text)[0].Cif;
+            tbNombres.Text =  docentes.GetDocentes(tbDato.Text)[0].Nombres;
+            tbApellidos.Text =  docentes.GetDocentes(tbDato.Text)[0].Apellidos;
+            dtpFechaNac.Value =  docentes.GetDocentes(tbDato.Text)[0].FechaNac;
+            tbTitulo.Text =  docentes.GetDocentes(tbDato.Text)[0].Titulo;
+            
         }
     }
 }

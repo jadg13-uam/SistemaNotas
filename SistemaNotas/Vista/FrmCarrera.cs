@@ -31,9 +31,11 @@ namespace SistemaNotas.Vista
 
         private void Listar()
         {
+            lista.CargarJson("C:\\backup\\carreras.json");
             dgvRegistros.DataSource = null;
             dgvRegistros.DataSource = lista.GetCarreras();
             dgvRegistros.Refresh();
+            gbRegistros.Text = "Registros guardados: " + dgvRegistros.Rows.Count;
         }
 
         private void dgvRegistros_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -57,6 +59,11 @@ namespace SistemaNotas.Vista
             dgvRegistros.DataSource = null;
             dgvRegistros.DataSource = lista.GetCarreras(tbDato.Text);
             dgvRegistros.Refresh();
+        }
+
+        private void FrmCarrera_Load(object sender, EventArgs e)
+        {
+            Listar();
         }
     }
 }

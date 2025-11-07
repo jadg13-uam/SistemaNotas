@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,11 +37,11 @@
             this.gbRegistros = new System.Windows.Forms.GroupBox();
             this.dgvRegistros = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tbDato = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             this.gbRegistros.SuspendLayout();
@@ -74,7 +74,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(21, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(49, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Código:";
             // 
@@ -90,7 +90,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(18, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(55, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
@@ -108,13 +108,14 @@
             // 
             this.dgvRegistros.AllowUserToAddRows = false;
             this.dgvRegistros.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvRegistros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvRegistros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRegistros.Location = new System.Drawing.Point(3, 16);
             this.dgvRegistros.Name = "dgvRegistros";
             this.dgvRegistros.ReadOnly = true;
+            this.dgvRegistros.RowHeadersWidth = 51;
             this.dgvRegistros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRegistros.Size = new System.Drawing.Size(309, 232);
             this.dgvRegistros.TabIndex = 0;
@@ -122,6 +123,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
@@ -131,27 +133,9 @@
             this.btnBuscar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(392, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(392, 27);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel1.Text = "Buscar Carrera:";
-            // 
-            // tbDato
-            // 
-            this.tbDato.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbDato.Name = "tbDato";
-            this.tbDato.Size = new System.Drawing.Size(100, 25);
-            this.tbDato.ToolTipText = "Escribe el nombre de la carrera a buscar";
             // 
             // toolStripButton1
             // 
@@ -159,7 +143,7 @@
             this.toolStripButton1.Image = global::SistemaNotas.Properties.Resources.Agregar;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton1.Text = "Agregar";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -169,9 +153,27 @@
             this.toolStripButton2.Image = global::SistemaNotas.Properties.Resources.Eliminar;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton2.Text = "Eliminar";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(107, 24);
+            this.toolStripLabel1.Text = "Buscar Carrera:";
+            // 
+            // tbDato
+            // 
+            this.tbDato.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbDato.Name = "tbDato";
+            this.tbDato.Size = new System.Drawing.Size(100, 27);
+            this.tbDato.ToolTipText = "Escribe el nombre de la carrera a buscar";
             // 
             // btnBuscar
             // 
@@ -179,7 +181,7 @@
             this.btnBuscar.Image = global::SistemaNotas.Properties.Resources.Buscar;
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(23, 22);
+            this.btnBuscar.Size = new System.Drawing.Size(29, 24);
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -193,6 +195,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmCarrera";
             this.Text = "Carrera";
+            this.Load += new System.EventHandler(this.FrmCarrera_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbRegistros.ResumeLayout(false);
