@@ -54,12 +54,30 @@ namespace SistemaNotas.Vista
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            tbCif.Text = docentes.GetDocentes(tbDato.Text)[0].Cif;
-            tbNombres.Text =  docentes.GetDocentes(tbDato.Text)[0].Nombres;
-            tbApellidos.Text =  docentes.GetDocentes(tbDato.Text)[0].Apellidos;
-            dtpFechaNac.Value =  docentes.GetDocentes(tbDato.Text)[0].FechaNac;
-            tbTitulo.Text =  docentes.GetDocentes(tbDato.Text)[0].Titulo;
-            
+            int registros = docentes.GetDocentes(tbDato.Text).Count();
+            if ( registros > 0)
+            {
+                tbCif.Text = docentes.GetDocentes(tbDato.Text)[0].Cif;
+                tbNombres.Text = docentes.GetDocentes(tbDato.Text)[0].Nombres;
+                tbApellidos.Text = docentes.GetDocentes(tbDato.Text)[0].Apellidos;
+                dtpFechaNac.Value = docentes.GetDocentes(tbDato.Text)[0].FechaNac;
+                tbTitulo.Text = docentes.GetDocentes(tbDato.Text)[0].Titulo;
+                ActivarBotones(registros);
+            } 
+        }
+
+        private void ActivarBotones(int registros)
+        {
+            if (registros > 1)
+            {
+                btnAnt.Enabled = true;
+                btnSig.Enabled = true;
+            }
+            else
+            {
+                btnAnt.Enabled = false;
+                btnSig.Enabled = false;
+            }
         }
     }
 }

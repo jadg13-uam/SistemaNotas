@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDocente));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -46,6 +47,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbCif = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnAnt = new System.Windows.Forms.ToolStripButton();
+            this.btnSig = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -59,10 +63,13 @@
             this.toolStripSeparator1,
             this.toolStripLabel1,
             this.tbDato,
-            this.btnBuscar});
+            this.btnBuscar,
+            this.toolStripSeparator2,
+            this.btnAnt,
+            this.btnSig});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(418, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(418, 31);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -72,7 +79,7 @@
             this.toolStripButton1.Image = global::SistemaNotas.Properties.Resources.Agregar;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton1.Text = "Agregar";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -82,25 +89,25 @@
             this.toolStripButton2.Image = global::SistemaNotas.Properties.Resources.Eliminar;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton2.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton2.Text = "Eliminar";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(110, 24);
+            this.toolStripLabel1.Size = new System.Drawing.Size(110, 28);
             this.toolStripLabel1.Text = "Buscar registro:";
             // 
             // tbDato
             // 
             this.tbDato.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbDato.Name = "tbDato";
-            this.tbDato.Size = new System.Drawing.Size(100, 27);
+            this.tbDato.Size = new System.Drawing.Size(100, 31);
             this.tbDato.ToolTipText = "Escribe el nombre de la carrera a buscar";
             // 
             // btnBuscar
@@ -109,7 +116,7 @@
             this.btnBuscar.Image = global::SistemaNotas.Properties.Resources.Buscar;
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(29, 24);
+            this.btnBuscar.Size = new System.Drawing.Size(29, 28);
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -213,6 +220,31 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "CIF:";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
+            // 
+            // btnAnt
+            // 
+            this.btnAnt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAnt.Enabled = false;
+            this.btnAnt.Image = ((System.Drawing.Image)(resources.GetObject("btnAnt.Image")));
+            this.btnAnt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAnt.Name = "btnAnt";
+            this.btnAnt.Size = new System.Drawing.Size(29, 28);
+            this.btnAnt.Text = "Anterior";
+            // 
+            // btnSig
+            // 
+            this.btnSig.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnSig.Enabled = false;
+            this.btnSig.Image = ((System.Drawing.Image)(resources.GetObject("btnSig.Image")));
+            this.btnSig.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSig.Name = "btnSig";
+            this.btnSig.Size = new System.Drawing.Size(29, 28);
+            this.btnSig.Text = "Siguiente";
+            // 
             // FrmDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,5 +284,8 @@
         private System.Windows.Forms.TextBox tbTitulo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton btnAnt;
+        private System.Windows.Forms.ToolStripButton btnSig;
     }
 }
